@@ -27,6 +27,15 @@ Before running the project, ensure you have the following installed:
 -   **MySQL Server**
 -   **Ollama** (for local LLM capabilities, if configured)
 
+## Obtaining API Keys
+
+### Groq API Key
+1.  Visit the [Groq Cloud Console](https://console.groq.com/keys).
+2.  Log in or Sign up.
+3.  Click on **"Create API Key"**.
+4.  Copy the generated key (starts with `gsk_`).
+5.  Paste it into your `backend/.env` file as `GROQ_API_KEY`.
+
 ## Installation & Setup
 
 ### 1. Database Setup
