@@ -36,6 +36,13 @@ Before running the project, ensure you have the following installed:
 4.  Copy the generated key (starts with `gsk_`).
 5.  Paste it into your `backend/.env` file as `GROQ_API_KEY`.
 
+### Secret Key
+To generate a secure `SECRET_KEY`, you can use Python:
+```bash
+python -c "import secrets; print(secrets.token_hex(32))"
+```
+Copy the output and paste it into your `backend/.env` file as `SECRET_KEY`.
+
 ## Installation & Setup
 
 ### 1. Database Setup
