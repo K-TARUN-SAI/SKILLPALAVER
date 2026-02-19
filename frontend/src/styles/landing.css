@@ -1,0 +1,138 @@
+.landing-page {
+    /* Background handled by global */
+    color: white;
+    padding-top: var(--spacing-xl);
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Center align image and text */
+    gap: var(--spacing-2xl);
+    position: relative;
+    z-index: 2;
+}
+
+.landing-text {
+    flex: 1;
+    max-width: 580px;
+}
+
+.landing-visual {
+    flex: 0 0 500px;
+    position: relative;
+}
+
+/* Visual Glow Effect */
+.visual-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%);
+    filter: blur(60px);
+    z-index: -1;
+}
+
+/* Badge */
+.badge-new {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: var(--spacing-lg);
+    color: var(--accent-color);
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-color);
+}
+
+/* Typography */
+.hero-title {
+    font-size: 3.5rem;
+    /* Larger than before */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-lg);
+    letter-spacing: -0.03em;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #22d3ee, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    /* Will need to override for dark bg, see below */
+    color: #94a3b8;
+    /* Slate-400 */
+    margin-bottom: var(--spacing-2xl);
+    max-width: 540px;
+}
+
+.hero-description strong {
+    color: white;
+    font-weight: 600;
+}
+
+/* Actions */
+.hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.trust-badges {
+    font-size: 0.875rem;
+    color: #64748b;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-md);
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .landing-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .landing-text {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .landing-visual {
+        width: 100%;
+        flex: auto;
+        margin-top: var(--spacing-xl);
+    }
+}

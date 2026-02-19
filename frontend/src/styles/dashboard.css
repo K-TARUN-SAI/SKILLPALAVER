@@ -1,0 +1,213 @@
+.dashboard-container {
+    padding: var(--spacing-xl);
+    max-width: 1400px;
+    margin: 0 auto;
+    color: var(--text-primary);
+}
+
+.dashboard-header {
+    margin-bottom: var(--spacing-xl);
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: white;
+}
+
+.dashboard-subtitle {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Specific to Matching Dashboard */
+.match-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.match-card:hover {
+    transform: translateY(-2px);
+}
+
+.match-score {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-color);
+}
+
+.section-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-interactive {
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.card-interactive:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-alt {
+    background-color: #eff6ff;
+    /* blue-50 equivalent */
+    border: 1px solid #dbeafe;
+}
+
+.section-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+/* LISTS */
+.job-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.job-list-item:last-child {
+    border-bottom: none;
+}
+
+.job-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/* TABLES */
+.table-container {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+}
+
+.data-table th {
+    background-color: #f9fafb;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: var(--spacing-md);
+    text-align: left;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.data-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.data-table tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Drag & Drop Upload */
+.drag-drop-zone {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: all 0.2s;
+    background-color: #f8fafc;
+    /* Slate-50 */
+    position: relative;
+    color: var(--text-secondary);
+}
+
+.drag-drop-zone.drag-active {
+    background-color: #f0f9ff;
+    /* Sky-50 */
+    border-color: var(--accent-color);
+}
+
+.file-input-hidden {
+    display: none;
+}
+
+.upload-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+}
+
+.divider-text {
+    display: block;
+    margin: var(--spacing-sm) 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.file-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-weight: 500;
+    color: var(--text-primary);
+    background: white;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.file-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text-danger {
+    color: var(--danger-color);
+}
+
+.error-text {
+    color: var(--danger-color);
+    font-size: 0.85rem;
+}
